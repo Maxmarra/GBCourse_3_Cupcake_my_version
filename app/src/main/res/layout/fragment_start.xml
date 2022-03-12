@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="50dp"
+            tools:context=".StartFragment">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/cake" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Закажи КЕКС"
+                android:textAlignment="center"
+                android:textSize="60sp" />
+
+            <Button
+                android:id="@+id/orderOneCupcake"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:paddingBottom="4dp"
+                android:text="Один кекс" />
+
+            <Button
+                android:id="@+id/orderSixCupcakes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="шесть кексов" />
+
+            <Button
+                android:id="@+id/orderTwelveCupcakes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Двенадцать кексов" />
+
+        </LinearLayout>
+    </ScrollView>
+</layout>
