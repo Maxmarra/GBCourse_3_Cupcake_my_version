@@ -12,6 +12,9 @@
     <string name="next">Дальше</string>
     <string name="cancel">Отменить</string>
 
+    <string name="choose_flavor">Выбор вкуса</string>
+    <string name="choose_pickup_date">Выбор даты</string>
+    <string name="order_summary">Итоговый заказ</string>
 
     <string name="quantity">Количество</string>
     <string name="flavor">Вкус</string>

@@ -3,7 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="viewModel"
+            type="com.example.cupcake1.model.OrderViewModel" />
     </data>
 
     <ScrollView

@@ -6,9 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.example.cupcake1.databinding.FragmentSummaryBinding
+import com.example.cupcake1.model.OrderViewModel
 
 class SummaryFragment : Fragment() {
+
+    private val sharedViewModel: OrderViewModel by activityViewModels()
 
     private var binding:FragmentSummaryBinding? = null
 
@@ -28,6 +33,7 @@ class SummaryFragment : Fragment() {
 
         binding?.apply {
             sendButton.setOnClickListener { sendOrder() }
+            viewModel = sharedViewModel
         }
     }
     fun sendOrder() {
