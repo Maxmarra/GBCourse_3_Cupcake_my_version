@@ -32,8 +32,10 @@ class FlavorFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding?.apply {
-            nextButton.setOnClickListener { goToNextScreen() }
+            //nextButton.setOnClickListener { goToNextScreen() }
             viewModel = sharedViewModel
+            lifecycleOwner = viewLifecycleOwner
+            flavorFragment = this@FlavorFragment
         }
     }
 

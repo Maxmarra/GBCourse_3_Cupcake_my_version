@@ -2,6 +2,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="startFragment"
+            type="com.example.cupcake1.StartFragment" />
+    </data>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -34,6 +40,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
+                android:onClick="@{()->startFragment.orderCupcake(1)}"
                 android:paddingBottom="4dp"
                 android:text="Один кекс" />
 
@@ -42,12 +49,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
+                android:onClick="@{()->startFragment.orderCupcake(6)}"
                 android:text="шесть кексов" />
 
             <Button
                 android:id="@+id/orderTwelveCupcakes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="@{()->startFragment.orderCupcake(12)}"
                 android:text="Двенадцать кексов" />
 
         </LinearLayout>

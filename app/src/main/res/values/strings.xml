@@ -7,6 +7,8 @@
     <string name="salted_caramel">Соленая карамель</string>
     <string name="coffee">Кофейный</string>
 
+    <string name="subtotal_price">Подытог %s</string>
+    <string name="total_price">Итого %s</string>
 
     <!--    кнопки-->
     <string name="next">Дальше</string>

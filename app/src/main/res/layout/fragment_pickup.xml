@@ -6,6 +6,10 @@
         <variable
             name="viewModel"
             type="com.example.cupcake1.model.OrderViewModel" />
+
+        <variable
+            name="pickupFragment"
+            type="com.example.cupcake1.PickupFragment" />
     </data>
 
     <ScrollView
@@ -75,7 +79,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/side_margin"
                 android:layout_marginEnd="@dimen/side_margin"
-                android:text="Подытог ₽5.00"
+                android:text="@{@string/subtotal_price(viewModel.price)}"
                 android:textAlignment="viewEnd"
                 tools:text="Подытог ₽5.00" />
 
@@ -99,6 +103,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/side_margin"
                     android:layout_weight="1"
+                    android:onClick="@{()-> pickupFragment.goToNextScreen()}"
                     android:text="@string/next" />
 
 
