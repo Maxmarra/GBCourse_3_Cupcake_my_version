@@ -46,6 +46,11 @@ class FlavorFragment : Fragment() {
 
     }
 
+    fun cancelOrder() {
+        sharedViewModel.resetOrder()
+        findNavController().navigate(R.id.action_flavorFragment_to_startFragment)
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         binding = null

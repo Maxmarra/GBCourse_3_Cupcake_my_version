@@ -41,6 +41,10 @@ class SummaryFragment : Fragment() {
     fun sendOrder() {
         Toast.makeText(activity, "Send Order", Toast.LENGTH_SHORT).show()
     }
+    fun cancelOrder() {
+        sharedViewModel.resetOrder()
+        findNavController().navigate(R.id.action_summaryFragment_to_startFragment)
+    }
     override fun onDestroyView() {
         super.onDestroyView()
         binding = null

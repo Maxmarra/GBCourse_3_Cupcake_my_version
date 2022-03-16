@@ -45,6 +45,10 @@ class PickupFragment : Fragment() {
        // Toast.makeText(activity, "Next", Toast.LENGTH_SHORT).show()
         findNavController().navigate(R.id.action_pickupFragment_to_summaryFragment)
     }
+    fun cancelOrder() {
+        sharedViewModel.resetOrder()
+        findNavController().navigate(R.id.action_pickupFragment_to_startFragment)
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()

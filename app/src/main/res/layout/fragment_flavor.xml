@@ -99,6 +99,7 @@
                     android:layout_margin ="@dimen/side_margin"
                     android:text="@string/cancel"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:onClick="@{()-> flavorFragment.cancelOrder()}"
                     android:layout_weight="1"/>
 
                 <Button
