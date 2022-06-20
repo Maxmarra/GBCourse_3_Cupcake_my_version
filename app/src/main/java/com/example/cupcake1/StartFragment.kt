@@ -32,6 +32,7 @@ class StartFragment : Fragment() {
 
         binding?.startFragment = this
 
+
 //        binding?.apply {
 //            // Set up the button click listeners
 //            orderOneCupcake.setOnClickListener { orderCupcake(1) }
@@ -40,22 +41,45 @@ class StartFragment : Fragment() {
 //        }
     }
 
+    fun getCustomNumber(): Int {
+        return Integer.parseInt(
+            binding?.customNumberText?.text.toString())
+    }
+
     fun orderCupcake(quantity: Int) {
-        sharedViewModel.setQuantity(quantity)
-        if(sharedViewModel.hasNoFlavorSet()){
-            sharedViewModel.setFlavor(getString(R.string.vanilla))
+        if(quantity == 0){
+            setErrorTextField(true)
+
         }
+        else {
+            setErrorTextField(false)
+            sharedViewModel.setQuantity(quantity)
+            if(sharedViewModel.hasNoFlavorSet()){
+                sharedViewModel.setFlavor(getString(R.string.vanilla))
+            }
 //        Toast.makeText(activity,
 //            "Заказ -> ${resources.getQuantityString(
 //                R.plurals.cupcakes, quantity, quantity)} ",
 //            Toast.LENGTH_SHORT).show()
-        findNavController().navigate(R.id.action_startFragment_to_flavorFragment)
+            findNavController().navigate(R.id.action_startFragment_to_flavorFragment)
+        }
+
 
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         binding = null
+    }
+
+    private fun setErrorTextField(error: Boolean) {
+        if (error) {
+            binding?.customNumberShell?.isErrorEnabled = true
+            binding?.customNumberShell?.error = getString(R.string.try_again)
+        } else {
+            binding?.customNumberShell?.isErrorEnabled = false
+            binding?.customNumberText?.text = null
+        }
     }
 
 

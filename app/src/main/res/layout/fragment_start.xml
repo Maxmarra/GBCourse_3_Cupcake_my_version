@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="startFragment"
             type="com.example.cupcake1.StartFragment" />
@@ -22,7 +24,7 @@
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="wrap_content"
-                android:layout_height="300dp"
+                android:layout_height="150dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/cake" />
 
@@ -30,9 +32,45 @@
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Закажи КЕКС"
+                android:text="@string/order_a_cupcake"
                 android:textAlignment="center"
-                android:textSize="60sp" />
+                android:textSize="40sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/customNumberShell"
+                style="@style/Widget.Unscramble.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_quantity"
+                app:errorIconDrawable="@drawable/ic_error"
+                app:helperTextTextAppearance="@style/TextAppearance.MaterialComponents.Subtitle1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/customNumberText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:text="0" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/orderCustomNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:onClick="@{()->startFragment.orderCupcake(startFragment.getCustomNumber())}"
+                android:paddingBottom="4dp"
+                android:text="@string/make_order" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/choose_quickly"
+                android:textAlignment="center"
+                android:textSize="30sp" />
 
             <Button
                 android:id="@+id/orderOneCupcake"
@@ -58,6 +96,7 @@
                 android:layout_height="wrap_content"
                 android:onClick="@{()->startFragment.orderCupcake(12)}"
                 android:text="Двенадцать кексов" />
+
 
         </LinearLayout>
     </ScrollView>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Кекс. Попытка 1</string>
+    <string name="app_name">Кекс</string>
 
     <string name="vanilla">Ванильный</string>
     <string name="chocolate">Шоколадный</string>
@@ -23,18 +23,31 @@
     <string name="pickup_date">Дата выдачи</string>
     <string name="send">Выбрать способ отправки</string>
 
+    <string name="enter_quantity">Введите количество</string>
+    <string name="try_again">Ноль кексов заказать нельзя! )))</string>
+
+
     <plurals name="cupcakes">
         <item quantity="one">%d кекс</item>
-        <item quantity="other">%d кексов</item>
+        <item quantity="other">%d кексa(ов)</item>
     </plurals>
 
     <string name="new_cupcake_order">Новый заказ</string>
     <string name="order_details">
-        Кол-во: %1$s кексов \n
+        Кол-во: %1$s\n
         Вкус: %2$s \n
         Дата выдачи: %3$s \n
         Итого: %4$s \n\n
         Спасибо!</string>
+    <string name="choose_quickly">Быстрый выбор</string>
+    <string name="make_order">Заказать</string>
+    <string name="order_a_cupcake">Закажи КЕКС!</string>
+    <!--    <string-array name="emails">-->
+<!--        <item>bklist@mail.ru</item>-->
+<!--    </string-array>-->
+
+
+
 
 
 </resources>
